@@ -25,6 +25,7 @@ Our behourial SRAM implementation can be seen in the ```SRAM.sv``` file, while o
  
 ## Analysis and Results
 To run an analysis of the SRAM to determine it's critical path and what the SRAM synthesizes on a 7a15t-cpg236 device run ```analyze_sram_system```. To test different sizes of RAM, change ```DAT``` and ```DPTH``` in ```SRAM.sv``` and assign ports in ```SRAM.xdc```. The folders ```16wide```, ```8wide```, ```4wide``` and ```2wide``` contain the results of an analysis of the SRAM for SRAM sizes of 16, 8, 4 and 2 respectively. The results show that the SRAM synthesizes to a combination of Look Up Tables (LUTs) and Shift Registers. For example the 2 sized SRAM synthesizes to:
+</pre>
 +----------------------------+------+-------+------------+-----------+-------+<br>
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |<br>
 +----------------------------+------+-------+------------+-----------+-------+<br>
@@ -39,7 +40,7 @@ To run an analysis of the SRAM to determine it's critical path and what the SRAM
 | F7 Muxes                   |    0 |     0 |          0 |     16300 |  0.00 |<br>
 | F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |<br>
 +----------------------------+------+-------+------------+-----------+-------+<br>
- 
+ </pre>
 The amount of "LUT as Memory" and "Register as Flip Flop" was the same as the size of the memory while the amount of "LUT as Logic" was always two for the four sizes of SRAM we analyzed. The critical path was the same for all  four sizes of SRAM which could be the result of the memory being controlled use LUTs instead of AND, NAND, and Muxes.
  
 ## Questions for Understanding
