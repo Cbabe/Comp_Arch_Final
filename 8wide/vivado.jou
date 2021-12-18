@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Dec 17 17:04:50 2021
+# Process ID: 3454
+# Current directory: /home/ubuntu/Final_Project
+# Command line: vivado -mode batch -source analysis.tcl
+# Log file: /home/ubuntu/Final_Project/vivado.log
+# Journal file: /home/ubuntu/Final_Project/vivado.jou
+#-----------------------------------------------------------
+source analysis.tcl

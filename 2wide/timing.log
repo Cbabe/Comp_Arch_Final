@@ -1,0 +1,20 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Fri Dec 17 20:09:54 2021
+| Host         : gminer-linux running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_timing -sort_by group -max_paths 100 -path_type summary -file timing.log -verbose
+| Design       : SRAM
+| Device       : 7a15t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+----------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Startpoint                     Endpoint                       Slack(ns)     
+----------------------------------------------------------------------------
+SRAM_reg_0_1_0_0/SP/CLK        dataOut_reg[0]/D               2.104         
+SRAM_reg_0_1_1_1/SP/CLK        dataOut_reg[1]/D               2.104         
+
+
+

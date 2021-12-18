@@ -1,0 +1,61 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Fri Dec 17 17:11:34 2021
+| Host         : gminer-linux running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_design_analysis -file design_analysis.log -verbose -show_all
+| Design       : SRAM
+| Device       : xc7a15t
+| Design State : Synthesized
+-------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Setup Path Characteristics 1-1
+
+1. Setup Path Characteristics 1-1
+---------------------------------
+
++---------------------------+-----------------------+
+|      Characteristics      |        Path #1        |
++---------------------------+-----------------------+
+| Requirement               | 4.000                 |
+| Path Delay                | 1.652                 |
+| Logic Delay               | 1.319(80%)            |
+| Net Delay                 | 0.333(20%)            |
+| Clock Skew                | -0.145                |
+| Slack                     | 2.104                 |
+| Timing Exception          |                       |
+| Bounding Box Size         | 0% x 0%               |
+| Clock Region Distance     | NA                    |
+| Fixed Loc                 | 0                     |
+| Fixed Route               | 0                     |
+| Hold Fix Detour           | 0                     |
+| Combined LUT Pairs        | 0                     |
+| Clock Relationship        | Safely Timed          |
+| Clock Group               | 1                     |
+| Logic Levels              | 0                     |
+| Routes                    | NA                    |
+| Logical Path              | RAMS32/CLK-(1)-FDRE/D |
+| Start Point Clock         | clk                   |
+| End Point Clock           | clk                   |
+| DSP Block                 | None                  |
+| BRAM                      | None                  |
+| IO Crossings              | 0                     |
+| Config Crossings          | 0                     |
+| SLR Crossings             | 0                     |
+| PBlocks                   | 0                     |
+| High Fanout               | 1                     |
+| Cumulative Fanout         | 1                     |
+| Dont Touch                | 0                     |
+| Mark Debug                | 0                     |
+| Start Point Pin Primitive | RAMS32/CLK            |
+| End Point Pin Primitive   | FDRE/D                |
+| Start Point Pin           | SP/CLK                |
+| End Point Pin             | dataOut_reg[0]/D      |
++---------------------------+-----------------------+
+* Bounding box calculated as % of dimensions for the target device (188, 300)
+
+
