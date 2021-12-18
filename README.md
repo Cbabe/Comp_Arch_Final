@@ -21,7 +21,7 @@ RAM was first created in 1947 with the use of the Williams tube[3]. The Williams
 RAM is constantly being improved, to reduce its physical size and power consumption and increase it's access speed.RAM following Moore's Law has gotten exponentially smaller over the years, but the speed of accessing memory has not kept pace with the increase of CPU speed. From 1986 to 2000, CPU speed increased at an annual rate of 55% while RAM speed only increased by 10% [7]. Technologies to combat this "Memory Wall'' are currently being developed.
  
 ## Our Implementation and Testbench
-Our behourial SRAM implementation can be seen in the ```SRAM.sv``` file, while our testbench is in ```Test_SRAM.sv```. To change the size of the SRAM edit the parameter ```DAT``` and ```DPTH``` in ```SRAM.sv```. To test the SRAM run ```test_sram``` in the terminal which writes and then reads from the same address in the SRAM.
+Our implementation of SRAM works by choosing an address and then choosing whether to read or write to that address. If writing to the address a new value for that address must be specified. If reading from an address the value from that address is outputted. Our behourial SRAM implementation can be seen in the ```SRAM.sv``` file, while our testbench is in ```Test_SRAM.sv```. To change the size of the SRAM edit the parameter ```DAT``` and ```DPTH``` in ```SRAM.sv```. To test the SRAM run ```test_sram``` in the terminal which writes and then reads from the same address in the SRAM.
 
 ## Hypothesis
 ![SRAM](SRAM.png)<br>
