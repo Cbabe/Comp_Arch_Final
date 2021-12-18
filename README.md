@@ -24,14 +24,14 @@ RAM is constantly being improved, to reduce its physical size and power consumpt
 Our behourial SRAM implementation can be seen in the ```SRAM.sv``` file, while our testbench is in ```Test_SRAM.sv```. To change the size of the SRAM edit the parameter ```DAT``` and ```DPTH``` in ```SRAM.sv```. To test the SRAM run ```test_sram``` in the terminal which writes and then reads from the same address in the SRAM.
 
 ## Hypothesis
-![SRAM](SRAM.png)
+![SRAM](SRAM.png)<br>
 Figure 1: One 4 bit address of SRAM.<br>
 SRAM is composed of addressable registers that can be read and written to. As shown in Figure 1 the inputs of SRAM are an address, a read, and a write, the output if using reading from a register comes from the tri states connected to the register. The address input goes into a decoder which selects the sram to read from or write to. As the size of the SRAM increases the size of the decoder also increases which results in a longer critical path and therefore a longer propagation delay and a longer time to retrieve memory. If the decoder was created using a binary tree, each time the decoder size or number of addresses doubled the propagation delay time of a 1 to 2 decoder would be added to the existing time it takes to read or write to an address.
 
  
 ## Analysis and Results
 To run an analysis of the SRAM to determine it's critical path and what the SRAM synthesizes on a 7a15t-cpg236 device run ```analyze_sram_system```. To test different sizes of RAM, change ```DAT``` and ```DPTH``` in ```SRAM.sv``` and assign ports in ```SRAM.xdc```. The folders ```16wide```, ```8wide```, ```4wide``` and ```2wide``` contain the results of an analysis of the SRAM for SRAM with address of 16, 8, 4 and 2 respectively. The results show that the SRAM synthesizes to a combination of Look Up Tables (LUTs) and Shift Registers.
-![Usage](usage.png)
+![Usage](usage.png)<br>
 Figure 2: The sythesis of 16 addressable SRAM registers.<br>
 The amount of "LUT as Memory" and "Register as Flip Flop" was the same as the size of the memory while the amount of "LUT as Logic" was always two for the four sizes of SRAM we analyzed. The critical path was the same for all four sizes of SRAM which could be the result of the memory optimizations during sythesis.
  
